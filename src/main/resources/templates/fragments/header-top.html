@@ -68,7 +68,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" onclick="document.forms['logoutForm'].submit()" href="">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -79,6 +79,8 @@
 
       </ul>
     </nav><!-- End Icons Navigation -->
+
+	<form id="logoutForm" method="POST" th:action="@{/logout}"></form>
 
   </header>
 </div>
