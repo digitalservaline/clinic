@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:fragment="header-css">
+	  <!-- Favicons -->
+	  <link th:href="@{/img/favicon.png}" rel="icon" />
+	  <link th:href="@{/img/apple-touch-icon.png}" rel="apple-touch-icon"/>
+	
+	  <!-- Google Fonts -->
+	  <link th:href="@{https://fonts.gstatic.com}" rel="preconnect"/>
+	  <link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i}" rel="stylesheet" />
+	
+	  <!-- Vendor CSS Files -->
+	  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+	  <link th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet"/>
+	  <link th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet"/>
+	  <link th:href="@{/vendor/quill/quill.snow.css}" rel="stylesheet"/>
+	  <link th:href="@{/vendor/quill/quill.bubble.css}" rel="stylesheet"/>
+	  <link th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet"/>
+	  <link th:href="@{/vendor/simple-datatables/style.css}" rel="stylesheet"/>
+	
+	  <!-- Template Main CSS File -->
+	  <link th:href="@{/css/style.css}" rel="stylesheet"/> 
+</div>
+</head>
+<body>
+	<div th:fragment="header_after_login">
+	
+		<header class="app-header navbar">
+			<button
+				class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto"
+				type="button">
+				<i class="icon-menu"></i>
+			</button>
+			<a class="navbar-brand" href="#"></a>
+			<button class="navbar-toggler sidebar-toggler d-md-down-none"
+				type="button">
+				<i class="icon-menu"></i>
+			</button>
+			<ul class="nav navbar-nav ml-auto pr15">
+				<!-- <li class="nav-item dropdown note"><a
+					class="nav-link dropdown-toggle nav-link" data-toggle="dropdown"
+					href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						<i class="icon-bell"></i><span
+						class="badge badge-pill badge-danger">3</span>
+				</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="#">Lorem ipsum dolor sit amet,
+							consectetur</a> <a class="dropdown-item" href="#">Lorem ipsum
+							dolor sit amet</a>
+					</div></li> -->
+				<!-- <li class="nav-item">
+				<input type="hidden" id="lang" th:value="${language}"/>
+				<a class="nav-link" id="hiLocale" style="display: none" title="हिन्दी">हिन्दी</a>
+				<a class="nav-link" id="enLocale" style="display: none" title="English">English</a>
+				</li> -->
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle nav-link" data-toggle="dropdown"
+					href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						<img th:src="@{/img/user.png}" class="img-avatar" alt="" /> <span
+						class="d-md-down-none" th:text="${loggedInUserName}">LoggedInUserName</span>
+						(<span
+						class="d-md-down-none" th:text="${roleName}">RoleName</span>)
+				</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<!-- <a class="dropdown-item" href="#"><i class="icon-user"></i>
+							Profile</a> --> <a class="dropdown-item" href="#changepassword"><i
+							class="icon-settings"></i> Change Password</a> <!-- <a class="dropdown-item"
+							th:href="@{/logout}"><i class="icon-logout"></i> Logout</a> -->
+							<a class="dropdown-item"
+							onclick="document.forms['logoutForm'].submit()" href=""><i class="icon-logout"></i> Logout</a>
+					</div></li>
+			</ul>
+			<form id="logoutForm" method="POST" th:action="@{/logout}"></form>
+			<!-- <button class="navbar-toggler aside-menu-toggler" type="button">☰</button> -->
+		</header>
+
+	</div>
+</body>
+</html>

@@ -89,5 +89,28 @@ public class AdminController {
 		ModelAndView modelAndView = new ModelAndView("admin/dashboard");
 		return modelAndView;
 	}
+	
+	@GetMapping(value = "/state")
+	public ModelAndView state(HttpServletRequest request) {
+		user = ClinicUtil.getUserDetail();
+		logger.info("User - {}, Role - {} - Displaying dashboard", user.getUsername(), user.getAuthorities());
+		ModelAndView modelAndView = new ModelAndView("admin/state");
+		return modelAndView;
+	}
+	
+	@GetMapping(value = "/city")
+	public ModelAndView addCity(HttpServletRequest request) {
+		user = ClinicUtil.getUserDetail();
+		logger.info("User - {}, Role - {} - Displaying dashboard", user.getUsername(), user.getAuthorities());
+		ModelAndView modelAndView = new ModelAndView("admin/city");
+		return modelAndView;
+	}
+	
+	@GetMapping(value = "/addSate")
+	public void addState(HttpServletRequest request) {
+		user = ClinicUtil.getUserDetail();
+		logger.info("User - {}, Role - {} - Displaying dashboard", user.getUsername(), user.getAuthorities());
+		ModelAndView modelAndView = new ModelAndView("admin/state");
+	}
 
 }

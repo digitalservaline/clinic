@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+</head>
+<body>
+	<div th:fragment="footer">
+	
+		<footer id="footer" class="footer">
+		    <div class="copyright">
+		      &copy; Copyright <strong><span>Clinic Care</span></strong>. All Rights Reserved
+		    </div>
+		    <div class="credits">
+		      Designed by <a href="http://digitalservaline.com/">Digital Servaline</a>
+		    </div>
+		  </footer>
+	
+		<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  		<script th:src="@{/js/jquery.min.js}"></script>
+  		
+		<script th:src="@{/angular/angular.min.js}"></script>
+		<script th:src="@{/angular/angular-route.min.js}"></script>
+		<script th:src="@{/angular/angular-idle.min.js}"></script>
+		<script th:src="@{/js/ui-bootstrap-tpls-2.5.0.min.js}"></script>
+		<script th:src="@{/angular/angular-loading.js}"></script>
+		<script th:src="@{/angular/angular-resource.min.js}"></script>
+		
+  
+	   <script  th:src="@{/vendor/apexcharts/apexcharts.min.js}"></script>
+	   <script  th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	   <script  th:src="@{/vendor/chart.js/chart.min.js}"></script>
+	   <script  th:src="@{/vendor/echarts/echarts.min.js}"></script>
+	   <script  th:src="@{/vendor/quill/quill.min.js}"></script>
+	   <script  th:src="@{/vendor/simple-datatables/simple-datatables.js}"></script>
+	   <script  th:src="@{/vendor/tinymce/tinymce.min.js}"></script>
+	   <script  th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+  	   <script th:src="@{/js/main.js}"></script>
+	   <script th:src="@{/angular/customdirective.js}"></script>
+	</div>
+</body>
+</html>
